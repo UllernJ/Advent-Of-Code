@@ -4,7 +4,7 @@ import utils.FileReader
 import java.util.Stack
 
 class Day1 {
-    private val input: List<String> = FileReader().getAllLines("day1.txt")
+    private val input: List<String> = FileReader("day1.txt").getAllLines()
     private var totalValue: Int = 0;
 
     //Task 1

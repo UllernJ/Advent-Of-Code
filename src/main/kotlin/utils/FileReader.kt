@@ -3,9 +3,9 @@ package utils
 import java.io.File
 import java.io.InputStream
 
-class FileReader {
+class FileReader(private val filename: String) {
 
-    fun getAllLines(filename: String): List<String> {
+    fun getAllLines(): List<String> {
         val list: MutableList<String> = mutableListOf()
         val inputStream: InputStream = File(PATH + filename).inputStream();
         inputStream.bufferedReader().forEachLine { line ->

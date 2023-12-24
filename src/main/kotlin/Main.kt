@@ -1,8 +1,7 @@
-import solutions.Day1
-import utils.FileReader
+import solutions.Day3
 
 fun main(args: Array<String>) {
-    val answer = Day1().calculateTask2()
+    val answer = Day3().solutionPart1()
     println(answer)
 
 }
