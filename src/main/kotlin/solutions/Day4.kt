@@ -2,15 +2,15 @@ package solutions
 
 import utils.FileReader
 
-class Day3 {
-    private val input: List<String> = FileReader("day3.txt").getAllLines()
+class Day4 {
+    private val input: List<String> = FileReader("day4.txt").getAllLines()
     private val games = input.map { game ->
         CardGame.of(game)
     }
 
     fun solutionPart1(): Int {
         val sum = games.sumOf { game ->
-            game.calculatePoints()
+            game.calculatePointsPart1()
         }
         return sum
     }
@@ -18,7 +18,7 @@ class Day3 {
     private data class CardGame(val winningNumbers: List<Int>, val numbers: List<Int>, private var points: Int = 0) {
 
 
-        fun calculatePoints(): Int {
+        fun calculatePointsPart1(): Int {
             winningNumbers.forEach { winningNumber ->
                 if (numbers.contains(winningNumber)) {
                     if (points == 0) {

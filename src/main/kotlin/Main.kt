@@ -1,7 +1,7 @@
-import solutions.Day3
+import solutions.Day4
 
 fun main(args: Array<String>) {
-    val answer = Day3().solutionPart1()
+    val answer = Day4().solutionPart1()
     println(answer)
 
 }
